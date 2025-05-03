@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ekrlym7dimqx"]
 
 [ext_resource type="Script" uid="uid://ddv1wkdyv2xuk" path="res://scenes/game/battle/action_box.gd" id="1_57fxv"]
-[ext_resource type="Texture2D" uid="uid://ep3p3321amyc" path="res://icon.svg" id="2_60ies"]
+[ext_resource type="Texture2D" uid="uid://c85pvti76dene" path="res://sprites/selector.png" id="2_60ies"]
 
 [node name="ActionBox" type="Control"]
 layout_mode = 3
@@ -23,5 +23,15 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Selector" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_60ies")
+
+[node name="DescriptionBox" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 153.0
+offset_right = 150.0
+offset_bottom = 253.0
+editable = false
+wrap_mode = 1
+autowrap_mode = 2

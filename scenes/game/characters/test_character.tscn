@@ -5,6 +5,17 @@
 
 [node name="TestCharacter" type="Node2D"]
 script = ExtResource("1_b65xb")
+character_name = "John"
+max_hp = 10
+hp = 10
+damage = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_hilww")
+
+[node name="Label" type="Label" parent="."]
+offset_top = -126.0
+offset_right = 228.0
+offset_bottom = 11.0
+scale = Vector2(0.4, 0.4)
+theme_override_font_sizes/font_size = 100

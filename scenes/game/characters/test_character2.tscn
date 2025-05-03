@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdyrppov8vpdu"]
+
+[ext_resource type="Script" uid="uid://ctgg6fr48ytrb" path="res://scenes/game/characters/test_character.gd" id="1_tj4wu"]
+[ext_resource type="Texture2D" uid="uid://ep3p3321amyc" path="res://icon.svg" id="2_nsce4"]
+
+[node name="TestCharacter2" type="Node2D"]
+script = ExtResource("1_tj4wu")
+character_name = "John2"
+max_hp = 10
+hp = 10
+damage = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nsce4")
+
+[node name="Label" type="Label" parent="."]
+offset_top = -126.0
+offset_right = 228.0
+offset_bottom = 11.0
+scale = Vector2(0.4, 0.4)
+theme_override_font_sizes/font_size = 100

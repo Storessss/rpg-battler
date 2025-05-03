@@ -1,21 +1,27 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbltd5xubkd7p"]
 
 [ext_resource type="Script" uid="uid://c1pn56kl1dnxq" path="res://scenes/game/battle/battle.gd" id="1_5od06"]
+[ext_resource type="PackedScene" uid="uid://c7viag27dorke" path="res://scenes/game/characters/zaine.tscn" id="2_rqgoa"]
 [ext_resource type="PackedScene" uid="uid://ekrlym7dimqx" path="res://scenes/game/battle/action_box.tscn" id="3_rqgoa"]
-[ext_resource type="PackedScene" uid="uid://4gsxq6trauon" path="res://scenes/game/characters/test_character.tscn" id="3_vjerc"]
 
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_5od06")
 
 [node name="YellowTeam" type="Node2D" parent="."]
 
-[node name="TestCharacter" parent="YellowTeam" instance=ExtResource("3_vjerc")]
-position = Vector2(177, 325)
+[node name="Zaine" parent="YellowTeam" instance=ExtResource("2_rqgoa")]
+position = Vector2(210, 467)
+
+[node name="Zaine2" parent="YellowTeam" instance=ExtResource("2_rqgoa")]
+position = Vector2(214, 265)
 
 [node name="PurpleTeam" type="Node2D" parent="."]
 
-[node name="TestCharacter" parent="PurpleTeam" instance=ExtResource("3_vjerc")]
-position = Vector2(890, 317)
+[node name="Zaine3" parent="PurpleTeam" instance=ExtResource("2_rqgoa")]
+position = Vector2(861, 258)
+
+[node name="Zaine4" parent="PurpleTeam" instance=ExtResource("2_rqgoa")]
+position = Vector2(897, 438)
 
 [node name="ActionBox" parent="." instance=ExtResource("3_rqgoa")]
 offset_left = 532.0

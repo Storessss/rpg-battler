@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7viag27dorke"]
+
+[ext_resource type="PackedScene" uid="uid://b3rgsruengdj0" path="res://scenes/game/characters/character.tscn" id="1_m7ttp"]
+[ext_resource type="Script" uid="uid://cb64xll7mkl0q" path="res://scenes/game/characters/zaine.gd" id="2_6gceu"]
+[ext_resource type="Texture2D" uid="uid://cdgwplyemd78j" path="res://sprites/zaine.png" id="2_8ljxh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6gceu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8ljxh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Zaine" instance=ExtResource("1_m7ttp")]
+script = ExtResource("2_6gceu")
+character_name = "Zaine"
+max_hp = 120
+hp = 120
+damage = 12
+defense = 7
+speed = 5
+luck = 1
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_6gceu")
