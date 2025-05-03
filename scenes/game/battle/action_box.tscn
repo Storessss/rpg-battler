@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://ekrlym7dimqx"]
+
+[ext_resource type="Script" uid="uid://ddv1wkdyv2xuk" path="res://scenes/game/battle/action_box.gd" id="1_57fxv"]
+[ext_resource type="Texture2D" uid="uid://ep3p3321amyc" path="res://icon.svg" id="2_60ies"]
+
+[node name="ActionBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_57fxv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Selector" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_60ies")

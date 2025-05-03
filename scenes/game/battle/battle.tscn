@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbltd5xubkd7p"]
+
+[ext_resource type="Script" uid="uid://c1pn56kl1dnxq" path="res://scenes/game/battle/battle.gd" id="1_5od06"]
+[ext_resource type="PackedScene" uid="uid://ekrlym7dimqx" path="res://scenes/game/battle/action_box.tscn" id="3_rqgoa"]
+[ext_resource type="PackedScene" uid="uid://4gsxq6trauon" path="res://scenes/game/characters/test_character.tscn" id="3_vjerc"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_5od06")
+
+[node name="YellowTeam" type="Node2D" parent="."]
+
+[node name="TestCharacter" parent="YellowTeam" instance=ExtResource("3_vjerc")]
+position = Vector2(177, 325)
+
+[node name="PurpleTeam" type="Node2D" parent="."]
+
+[node name="TestCharacter" parent="PurpleTeam" instance=ExtResource("3_vjerc")]
+position = Vector2(890, 317)
+
+[node name="ActionBox" parent="." instance=ExtResource("3_rqgoa")]
+offset_left = 532.0
+offset_top = 295.0
+offset_right = 532.0
+offset_bottom = 295.0
