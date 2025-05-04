@@ -20,6 +20,10 @@ theme_override_font_sizes/font_size = 100
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 
+[node name="Magic" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+
 [node name="Defense" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
@@ -28,6 +32,10 @@ theme_override_font_sizes/font_size = 100
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 
-[node name="Luck" type="Label" parent="VBoxContainer"]
+[node name="CritChance" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+
+[node name="CritMultiplier" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 100

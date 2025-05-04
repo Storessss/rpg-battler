@@ -1,5 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1whnej7urumi"]
+[gd_scene load_steps=5 format=3 uid="uid://d1whnej7urumi"]
 
 [ext_resource type="PackedScene" uid="uid://b3rgsruengdj0" path="res://scenes/game/characters/character.tscn" id="1_des7c"]
+[ext_resource type="Script" uid="uid://x50l2hxhrnkr" path="res://scenes/game/characters/belle.gd" id="2_4e1v2"]
+[ext_resource type="Texture2D" uid="uid://bhftvaqswpsww" path="res://sprites/belle.png" id="2_ajkj0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4e1v2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ajkj0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Belle" instance=ExtResource("1_des7c")]
+script = ExtResource("2_4e1v2")
+character_name = "Belle"
+max_hp = 50
+hp = 50
+defense = 1
+speed = 15
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_4e1v2")

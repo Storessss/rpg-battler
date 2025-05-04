@@ -1,20 +1,26 @@
 extends Character
 
 var actions: Dictionary = {
-	"Attack": {
-		"description": "Attacks for damage - defense, can crit",
+	"Shadow Slash": {
+		"description": "Attacks 1 target, gains one shade charge",
 		"min_target_allies": 0,
 		"max_target_allies": 0,
 		"min_target_enemies": 1,
 		"max_target_enemies": 1,
-		"action": Callable(self, "attack")
+		"light_charges": 0,
+		"shade_charges": 0,
+		"balance_charges": 0,
+		"action": Callable(self, "shadow_slash")
 	},
 	"Double Slash": {
-		"description": "Evenly splits a 40 damage double attack",
+		"description": "Evenly splits a 40 damage double attack, receaves weakness",
 		"min_target_allies": 0,
 		"max_target_allies": 0,
 		"min_target_enemies": 1,
 		"max_target_enemies": 2,
+		"light_charges": 0,
+		"shade_charges": 0,
+		"balance_charges": 0,
 		"action": Callable(self, "double_slash")
 	}
 }
