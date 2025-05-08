@@ -20,10 +20,10 @@ script = ExtResource("2_6gceu")
 character_name = "Zaine"
 max_hp = 120
 hp = 120
-damage = 12
-defense = 7
-speed = 5
-luck = 1
+attack = 15
+defense = 5
+speed = 4
+crit_chance = 20
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_6gceu")

@@ -24,7 +24,17 @@ func _process(delta: float) -> void:
 		action_box.clear_actions()
 		action_box.populate_actions()
 		
+	display_charges()
+		
 func turn_order():
 	GlobalVariables.characters.sort_custom(func(a, b):
 		return a.speed > b.speed
 	)
+
+func display_charges():
+	$YellowTeamCharges/Light.text = "Light charges: " + str(GlobalVariables.yellow_team_light_charges)
+	$YellowTeamCharges/Shade.text = "Shade charges: " + str(GlobalVariables.yellow_team_shade_charges)
+	$YellowTeamCharges/Balance.text = "Balance charges: " + str(GlobalVariables.yellow_team_balance_charges)
+	$PurpleTeamCharges/Light.text = "Light charges: " + str(GlobalVariables.purple_team_light_charges)
+	$PurpleTeamCharges/Shade.text = "Shade charges: " + str(GlobalVariables.purple_team_shade_charges)
+	$PurpleTeamCharges/Balance.text = "Balance charges: " + str(GlobalVariables.purple_team_balance_charges)

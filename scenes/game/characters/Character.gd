@@ -11,6 +11,16 @@ class_name Character
 @export var speed: int
 @export var crit_chance: int
 @export var crit_multiplier: float = 1.5
+var memory: Dictionary = {
+	"max_hp": max_hp,
+	"hp": hp,
+	"attack": attack,
+	"magic": magic,
+	"defense": defense,
+	"speed": speed,
+	"crit_chance": crit_chance,
+	"crit_multiplier": crit_multiplier
+}
 
 var downed: bool
 func down():
@@ -27,7 +37,7 @@ func crit(raw_amount: int):
 	var multiplier: float = 1.0
 	if is_crit:
 		multiplier = crit_multiplier
-	return multiplier
+	return raw_amount * multiplier
 
 var status_effects: Array
 var temp_effect_modifiers: Dictionary
@@ -88,4 +98,16 @@ func update_labels():
 		
 func _process(delta: float) -> void:
 	update_labels()
+	hp = min(max_hp, hp)
+	update_memory()
 	
+var temp_label_scene = preload("res://scenes/game/battle/temp_label.tscn")
+func update_memory():
+	for key in memory.keys():
+		var current = get(key)
+		var delta = current - memory[key]
+		if delta != 0:
+			var temp_label = temp_label_scene.instantiate()
+			temp_label.text = key + " " + str(delta)
+			$StatUpdates.add_child(temp_label)
+			memory[key] = current

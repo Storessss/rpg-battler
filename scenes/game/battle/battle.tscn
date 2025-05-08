@@ -29,3 +29,38 @@ offset_left = 532.0
 offset_top = 295.0
 offset_right = 532.0
 offset_bottom = 295.0
+
+[node name="YellowTeamCharges" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.2, 0.2)
+
+[node name="Light" type="Label" parent="YellowTeamCharges"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+
+[node name="Shade" type="Label" parent="YellowTeamCharges"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+
+[node name="Balance" type="Label" parent="YellowTeamCharges"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+
+[node name="PurpleTeamCharges" type="VBoxContainer" parent="."]
+offset_left = 934.0
+offset_right = 974.0
+offset_bottom = 419.0
+scale = Vector2(0.2, 0.2)
+
+[node name="Light" type="Label" parent="PurpleTeamCharges"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+
+[node name="Shade" type="Label" parent="PurpleTeamCharges"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+
+[node name="Balance" type="Label" parent="PurpleTeamCharges"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100

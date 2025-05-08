@@ -16,12 +16,12 @@ var strength_effect = {
 	"tick_time": "end",
 	"duration": 2,
 	"apply": func(target):
-		var bonus = int(target.damage * 0.33)
+		var bonus = int(target.attack * 0.33)
 		target.temp_effect_modifiers["strength"] = bonus
-		target.damage += bonus,
+		target.attack += bonus,
 	"on_expire": func(target):
 		var bonus = target.temp_effect_modifiers["strength"]
-		target.damage -= bonus
+		target.attack -= bonus
 		target.temp_effect_modifiers.erase("strength")
 }
 var weakness_effect = {

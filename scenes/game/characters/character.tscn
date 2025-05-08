@@ -39,3 +39,10 @@ theme_override_font_sizes/font_size = 100
 [node name="CritMultiplier" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
+
+[node name="StatUpdates" type="VBoxContainer" parent="."]
+offset_left = -179.0
+offset_top = -44.0
+offset_right = 227.0
+offset_bottom = 939.0
+scale = Vector2(0.2, 0.2)

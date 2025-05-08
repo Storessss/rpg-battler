@@ -20,8 +20,11 @@ script = ExtResource("2_4e1v2")
 character_name = "Belle"
 max_hp = 50
 hp = 50
+attack = 2
+magic = 10
 defense = 1
 speed = 15
+crit_chance = 20
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_4e1v2")

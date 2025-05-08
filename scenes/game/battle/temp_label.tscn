@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://4qudk58qp67"]
+
+[ext_resource type="Script" uid="uid://gtyyyn0uibvn" path="res://scenes/game/battle/temp_label.gd" id="1_ymhle"]
+
+[node name="TempLabel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ymhle")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 100
+
+[node name="DestroyTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]

@@ -31,8 +31,8 @@ func is_in_yellow_team(member: Character) -> bool:
 	else:
 		return false
 		
-func add_charge(type: String, amount: int, target: Array[Character]):
-	if GlobalVariables.is_in_yellow_team(target[0]):
+func add_charge(type: String, amount: int, target: Character):
+	if GlobalVariables.is_in_yellow_team(target):
 		if type == "light":
 			GlobalVariables.yellow_team_light_charges += amount
 		elif type == "shade":
