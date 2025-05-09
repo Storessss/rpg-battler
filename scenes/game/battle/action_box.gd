@@ -57,7 +57,7 @@ func _process(_delta: float) -> void:
 		index = (index + 1 + vbox.get_child_count()) % vbox.get_child_count()
 	if vbox.get_child(index):
 		selector.position = vbox.get_child(index).position
-		selector.position += Vector2(100, -15)
+		selector.position += Vector2(100, -30)
 	if turn_phase == 0:
 		if GlobalVariables.actions.has(vbox.get_child(index).text):
 			description_box.text = GlobalVariables.actions[vbox.get_child(index).text]["description"]

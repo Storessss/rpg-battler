@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 @onready var action_box = $ActionBox
 

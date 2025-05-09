@@ -48,7 +48,8 @@ func start_turn():
 	modulate = Color.YELLOW
 	for effect in status_effects.duplicate():
 		if effect["tick_time"] == "start":
-			effect["apply"].call(self)
+			if effect["tick_type"] == "turn":
+				effect["apply"].call(self)
 			effect["duration"] -= 1
 			if effect["duration"] <= 0:
 				if effect.has("on_expire"):
@@ -59,7 +60,8 @@ func end_turn():
 	modulate = Color.WHITE
 	for effect in status_effects.duplicate():
 		if effect["tick_time"] == "end":
-			effect["apply"].call(self)
+			if effect["tick_type"] == "turn":
+				effect["apply"].call(self)
 			effect["duration"] -= 1
 			if effect["duration"] <= 0:
 				if effect.has("on_expire"):
@@ -77,6 +79,8 @@ func apply_status(effect: Dictionary):
 		status_effects[existing_index] = effect
 	else:
 		status_effects.append(effect)
+		if effect["tick_type"] == "once":
+			effect["apply"].call(self)
 	
 func update_labels():
 	for label in $VBoxContainer.get_children():

@@ -6,43 +6,41 @@
 scale = Vector2(3, 3)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 28.0
-offset_top = -36.0
-offset_right = 434.0
-offset_bottom = 806.0
-scale = Vector2(0.2, 0.2)
+offset_left = 60.0
+offset_top = -110.0
+offset_right = 61.0
+offset_bottom = 110.0
 
 [node name="Hp" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="Damage" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="Magic" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="Defense" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="Speed" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="CritChance" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="CritMultiplier" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="StatUpdates" type="VBoxContainer" parent="."]
-offset_left = -179.0
-offset_top = -44.0
-offset_right = 227.0
-offset_bottom = 939.0
-scale = Vector2(0.2, 0.2)
+offset_left = -120.0
+offset_top = -110.0
+offset_right = -120.0
+offset_bottom = 110.0

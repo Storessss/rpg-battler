@@ -5,62 +5,67 @@
 [ext_resource type="PackedScene" uid="uid://ekrlym7dimqx" path="res://scenes/game/battle/action_box.tscn" id="3_rqgoa"]
 [ext_resource type="PackedScene" uid="uid://d1whnej7urumi" path="res://scenes/game/characters/belle.tscn" id="3_vjerc"]
 
-[node name="Battle" type="Node2D"]
+[node name="Battle" type="CanvasLayer"]
 script = ExtResource("1_5od06")
 
 [node name="YellowTeam" type="Node2D" parent="."]
 
 [node name="Zaine" parent="YellowTeam" instance=ExtResource("2_rqgoa")]
-position = Vector2(210, 467)
+position = Vector2(200, 162)
 
 [node name="Belle" parent="YellowTeam" instance=ExtResource("3_vjerc")]
-position = Vector2(194, 234)
+position = Vector2(200, 324)
 
 [node name="PurpleTeam" type="Node2D" parent="."]
 
 [node name="Zaine3" parent="PurpleTeam" instance=ExtResource("2_rqgoa")]
-position = Vector2(861, 258)
+position = Vector2(952, 162)
 
 [node name="Belle2" parent="PurpleTeam" instance=ExtResource("3_vjerc")]
-position = Vector2(902, 476)
+position = Vector2(952, 324)
 
 [node name="ActionBox" parent="." instance=ExtResource("3_rqgoa")]
-offset_left = 532.0
-offset_top = 295.0
-offset_right = 532.0
-offset_bottom = 295.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="YellowTeamCharges" type="VBoxContainer" parent="."]
 offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.2, 0.2)
+offset_bottom = 419.0
 
 [node name="Light" type="Label" parent="YellowTeamCharges"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="Shade" type="Label" parent="YellowTeamCharges"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="Balance" type="Label" parent="YellowTeamCharges"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="PurpleTeamCharges" type="VBoxContainer" parent="."]
-offset_left = 934.0
-offset_right = 974.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
 offset_bottom = 419.0
-scale = Vector2(0.2, 0.2)
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Light" type="Label" parent="PurpleTeamCharges"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="Shade" type="Label" parent="PurpleTeamCharges"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20
 
 [node name="Balance" type="Label" parent="PurpleTeamCharges"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 20

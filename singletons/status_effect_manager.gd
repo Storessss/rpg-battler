@@ -4,6 +4,7 @@ var poison_effect = {
 	"name": "Poison",
 	"is_positive": false,
 	"tick_time": "start",
+	"tick_type": "turn",
 	"duration": 3,
 	"apply": func(target):
 		target.hp -= 3,
@@ -14,9 +15,10 @@ var strength_effect = {
 	"name": "Strength",
 	"is_positive": true,
 	"tick_time": "end",
+	"tick_type": "once",
 	"duration": 2,
 	"apply": func(target):
-		var bonus = int(target.attack * 0.33)
+		var bonus = round(target.attack * 0.33)
 		target.temp_effect_modifiers["strength"] = bonus
 		target.attack += bonus,
 	"on_expire": func(target):
@@ -28,6 +30,7 @@ var weakness_effect = {
 	"name": "Weakness",
 	"is_positive": false,
 	"tick_time": "end",
+	"tick_type": "once",
 	"duration": 2,
 	"apply": func(target):
 		target.damage -= 15,
